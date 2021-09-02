@@ -8,15 +8,45 @@ Berechnen Sie die Summe der Zahlen.
 Geben Sie die Summe der Zahlen in die Konsole aus:
 "Die Summe der Zahlen ist: summe"
 */
-
 let Value1;
 let Value2;
-let summ;
-
+let Opp;
 Value1 = prompt("Please enter the first value:");
 Value2 = prompt("Please enter the second value:");
-summ = Number(Value1) + Number(Value2);
-console.log("The result is:" + summ);
+Opp = prompt("Please enter either + or - :");
+rechner(Value1,Value2,Opp);
+
+
+function rechner(Value1,Value2,Opp)
+{
+   
+    switch (Opp) {
+        case "+":
+            console.log(summe(Value1,Value2));
+            break;
+        case "-":
+            console.log(differenz(Value1,Value2));
+            break;
+        default:
+            console.log("Invalid Operator");
+            break;
+    }
+
+
+}
+
+function summe(a,b) {
+    
+    let C = (Number(a) + Number(b));
+    return "Das Ergebnis ist : " + C;
+}
+
+function differenz(a,b) {
+    let C = (Number(a) - Number(b));
+    return "Das Ergebnis ist : " + C;
+}
+//summ = Number(Value1) + Number(Value2);
+//console.log("The result is:" + summ);
 /*********** Variante 1  ****************/
 
 // Vorteil: gute Lesbarkeit | aber viele Variablen
@@ -54,7 +84,7 @@ console.log("Die Summe ist: " + summe);
 
 /*********** Variante 3  ****************/
 // Kompakt, aber schlecht lesbar
-
+/*
 console.log
 (
     "Die Summe ist: " + 
@@ -62,4 +92,4 @@ console.log
     parseFloat(prompt("Bitte Zahl 1 eingeben")) +
     parseFloat(prompt("Bitte Zahl 2 eingeben"))
    ) 
-);
+);*/
