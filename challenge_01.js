@@ -8,13 +8,19 @@ Berechnen Sie die Summe der Zahlen.
 Geben Sie die Summe der Zahlen in die Konsole aus:
 "Die Summe der Zahlen ist: summe"
 */
+/*
 let Value1;
 let Value2;
 let Opp;
 Value1 = prompt("Please enter the first value:");
 Value2 = prompt("Please enter the second value:");
 Opp = prompt("Please enter either + or - :");
-rechner(Value1,Value2,Opp);
+*/
+
+/*
+
+rechner(10,10,"+");
+rechner(10,0,"*");
 
 
 function rechner(Value1,Value2,Opp)
@@ -24,8 +30,8 @@ function rechner(Value1,Value2,Opp)
         case "+":
             console.log(summe(Value1,Value2));
             break;
-        case "-":
-            console.log(differenz(Value1,Value2));
+        case "*":
+            console.log(produkt(Value1,Value2));
             break;
         default:
             console.log("Invalid Operator");
@@ -41,10 +47,50 @@ function summe(a,b) {
     return "Das Ergebnis ist : " + C;
 }
 
-function differenz(a,b) {
-    let C = (Number(a) - Number(b));
+function produkt(a,b) {
+    let C = (Number(a) * Number(b));
     return "Das Ergebnis ist : " + C;
+}*/
+
+
+rechner(10,10,"+");
+rechner(10,10,"*");
+
+
+function rechner(Value1,Value2,Opp)
+{
+   
+    switch (Opp) {
+        case "+":
+            console.log(summe(Value1,Value2));
+            break;
+        case "*":
+            console.log(produkt(Value1,Value2));
+            break;
+        default:
+            console.log("Invalid Operator");
+            break;
+    }
+
+
 }
+
+function summe(a,b) {
+    
+    let C = (Number(a) + Number(b));
+    return "Das Ergebnis lautet : " + C;
+}
+
+function produkt(a,b) {
+    let C = (Number(a) * Number(b));
+    return "Das Ergebnis lautet : " + C;
+}
+
+
+
+
+
+
 //summ = Number(Value1) + Number(Value2);
 //console.log("The result is:" + summ);
 /*********** Variante 1  ****************/
